@@ -54,11 +54,11 @@
         </div>
     </div>
 
-{{--    <script>--}}
-{{--        $("menu-toggle").click(function (e) {--}}
-{{--            e.preventDefault();--}}
-{{--            $("wrapper").toggleClass("menuDisplayed");--}}
-{{--        });--}}
-{{--    </script>--}}
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("menuDisplayed");
+        });
+    </script>
     </body>
 </html>

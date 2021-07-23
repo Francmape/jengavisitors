@@ -2,7 +2,7 @@
 #sidebar-wrapper{
     z-index: 1;
     position: absolute;
-    width: 200px;
+    width: 0;
     height: 100%;
     overflow-y: hidden;
     background: #2C3E50;
@@ -13,17 +13,17 @@
 /*Main Content*/
 #page-content-wrapper{
     width: 100%;
-    padding-left: 200px;
+    padding: 15px;
     position: absolute;
 }
 
 /*Change the width of sidebar to display it*/
 #wrapper.menuDisplayed #sidebar-wrapper{
-    width: 250px;
+    width: 200px;
 }
 
 #wrapper.menuDisplayed #page-content-wrapper{
-    padding-left: 250px;
+    padding-left: 200px;
 }
 
 /*Sidebar Styling*/
