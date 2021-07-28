@@ -8,7 +8,7 @@
                         New Visitor
                     </div>
                     <div class="card-body">
-                        <form class="contact-form">
+                        <form class="contact-form" action="/add-visitor" method="POST">
                             @csrf
 {{--                            Form section--}}
                             <div class="form-section">
@@ -32,11 +32,16 @@
                             <div class="form-section">
                                 <div class="mt-3">
                                     <label for="office" class="form-label">Visiting Office</label>
-                                    <input type="office" name="office" class="form-control" id="phone" required>
+                                    <div class="input-group select-group">
+                                        <select class="form-control input-group-addon" name="office">
+                                            <option value="Clook Technologies">Clook Technologies</option>
+                                            <option value="Jenga Space">Jenga Space</option>
+                                        </select>
+
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="form-navigation">
+                            <div class="form-navigation mt-4">
                                 <button type="button" class="previous btn btn-info float-left">Previous</button>
                                 <button type="button" class="next btn btn-info float-right">Next</button>
                                 <button type="submit" class="btn btn-success float-right">Submit</button>

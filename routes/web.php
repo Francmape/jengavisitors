@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\VisitorsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +15,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
+//Route::get('/login', function () {
+//    return view('login');
+//});
+Route::get('/logout', function () {
+    Session::forget('user');
+    return redirect('login');
 });
 Route::view('/login','login');
-Route::view('/dashboard','dashboard');
+Route::post('/login',[UserController::class,'login']);
+
+Route::view('/','dashboard');
+
 Route::view('/add-visitor','add-visitor');
+Route::post('/add-visitor',[VisitorsController::class,'addVisitor']);
+Route::get('/visitors',[VisitorsController::class,'visitors']);
+
+Route::view('/add-user','add-user');
+Route::post('/add-user',[UserController::class,'addUser']);
+Route::get('/users',[UserController::class,'users']);
+Route::get('/users/remove/{id}',[UserController::class,'removeUser']);

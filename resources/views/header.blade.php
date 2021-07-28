@@ -16,7 +16,7 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li class="nav-item">
-                <a class="nav-link" href="#">User</a>
+                <a class="nav-link" href="#">{{Session::get('user')['name']}}</a>
             </li>
 {{--            <li class="nav-item dropdown">--}}
 {{--                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}

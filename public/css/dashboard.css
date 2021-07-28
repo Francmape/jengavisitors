@@ -1,0 +1,11 @@
+.dashboard-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dashboard-card {
+    flex: 25%;
+    max-width: 25%;
+    background: white;
+}
